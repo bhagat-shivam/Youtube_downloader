@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">YouTube Video Downloader</h1>
+            <p class="description">Paste the YouTube URL below and select your preferred format.</p>
+
+            <form id="downloadForm" method="post" action="/download">
+                <div class="input-group">
+                    <label for="url">YouTube URL:</label>
+                    <input type="url" id="url" name="url" placeholder="Enter YouTube URL" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="format">Select Format:</label>
+                    <select id="format" name="format">
+                        <option value="mp4">MP4 (Video)</option>
+                        <option value="mp3">MP3 (Audio)</option>
+                    </select>
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="btn">Download</button>
+                </div>
+            </form>
+
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="footer">
+            <p>&copy; 2025 YouTube Downloader. All rights reserved.</p>
+            <p>Developed by <a href="https://github.com/bhagat-shivam" target="_blank">bhagat-shivam</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
